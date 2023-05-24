@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .container {
@@ -37,8 +38,8 @@ body {
 
 .scoreboard {
   position: absolute;
-  width: 95%;
-  max-width: 400px;
+  width: calc(95% - 3em);
+  max-width: 500px;
   top: 2em;
   padding: 0.5em 1em;
   background-color: var(--scoreboard);
@@ -69,23 +70,52 @@ body {
 }
 
 .score {
+  --cscore: -3em;
   font-size: 2em;
-  padding: 0 0.4em;
+  padding: 0 0.5em;
   border-radius: 5px;
-  background-color: #f4f4f4;
+  background-color: #161516;
+  color: white;
+  flex-grow: 1;
+  max-width: 2em;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.score .after {
+  transform: translateZ(-10px);
+  position: absolute;
+  width: 3em;
+  top: 0;
+  bottom: 0;
+  background-color: #6f14df;
+  right: var(--cscore);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.computer-score {
+  text-align: right;
+}
+
+.computer-score .after {
+  right: auto;
+  left: var(--cscore);
 }
 
 .displays img {
   width: 1vw;
   aspect-ratio: 1;
   object-fit: contain;
-  display: none;
+  transform: scale(0);
+  transition: transform 2s ease-in-out;
+  opacity: 0;
 }
 
 .displays img.active {
-  display: block;
+  opacity: 1;
   transform: scale(25);
-  transition: transform 1s ease-in-out;
 }
 
 .actions {
@@ -100,6 +130,7 @@ body {
   background-color: var(--scoreboard);
   padding: 1em;
   border-radius: 5px;
+  width: fit-content;
 }
 
 .actions img {
@@ -117,7 +148,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.message {
+#message {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -134,16 +165,22 @@ body {
   opacity: 0;
 }
 
-.message.active {
+#message.active {
   opacity: 1;
+  background-color: #55f77a;
+  color: black;
 }
 
-.message.error {
-  color: white;
+#message.error {
   background-color: rgb(252, 72, 72);
+  color: white;
 }
 
-@media screen and (max-width: 600px) {
+#message.info {
+  background-color: rgb(72, 171, 252);
+}
+
+@media screen and (max-width: 700px) {
   .container {
     grid-template-columns: 1fr;
   }

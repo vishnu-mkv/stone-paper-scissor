@@ -14,24 +14,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="message active error">Computer wins.</div>
+      <div id="message"></div>
       <div class="splitup computer">
         <div class="displays">
-          <img src="./assets/rock.svg" class="rock active" alt="" />
-          <img src="./assets/paper.png" class="paper" alt="" srcset="" />
-          <img src="./assets/scissors.png" class="scissors" alt="" srcset="" />
+          <img src="./assets/rock.svg" id="computer-rock" />
+          <img src="./assets/paper.png" id="computer-paper" />
+          <img src="./assets/scissors.png" id="computer-scissor" />
         </div>
       </div>
       <div class="splitup user">
         <div class="displays">
-          <img src="./assets/rock.svg" class="rock" alt="" />
-          <img src="./assets/paper.png" class="paper active" alt="" srcset="" />
-          <img src="./assets/scissors.png" class="scissors" alt="" srcset="" />
+          <img src="./assets/rock.svg" id="user-rock" />
+          <img src="./assets/paper.png" id="user-paper" />
+          <img src="./assets/scissors.png" id="user-scissor" />
         </div>
         <div class="actions">
-          <img src="./assets/rock.svg" data-value="rock" alt="" />
+          <img src="./assets/rock.svg" data-value="rock" />
           <img src="./assets/paper.png" data-value="paper" />
-          <img src="./assets/scissors.png" data-value="scissors" />
+          <img src="./assets/scissors.png" data-value="scissor" />
           <img src="./assets/loading.png" data-value="restart" />
         </div>
       </div>
@@ -42,10 +42,14 @@
               <div class="avatar computer"></div>
               <span class="name">Computer</span>
             </div>
-            <span class="score computer-score">28</span>
+            <div class="computer-score score">
+              <span id="computer-score">0</span><span class="after"></span>
+            </div>
           </div>
           <div class="info">
-            <span class="score user-score">32</span>
+            <div class="score">
+              <span id="user-score">0</span><span class="after"></span>
+            </div>
             <div class="profile">
               <span class="name">You</span>
               <div class="avatar user"></div>
