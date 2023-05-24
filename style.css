@@ -5,6 +5,8 @@
   --scoreboard: #fff;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
 body {
   background-color: var(--background);
   font-family: "Roboto", sans-serif;
@@ -74,13 +76,15 @@ body {
   font-size: 2em;
   padding: 0 0.5em;
   border-radius: 5px;
-  background-color: #161516;
-  color: white;
+  background-color: #f3f3f3;
+  color: black;
   flex-grow: 1;
   max-width: 2em;
   position: relative;
   overflow: hidden;
   z-index: 10;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 .score .after {
@@ -89,7 +93,7 @@ body {
   width: 3em;
   top: 0;
   bottom: 0;
-  background-color: #6f14df;
+  background-color: var(--user-color);
   right: var(--cscore);
   transition: all 0.3s ease-in-out;
   z-index: -1;
@@ -102,6 +106,7 @@ body {
 .computer-score .after {
   right: auto;
   left: var(--cscore);
+  background-color: var(--computer-color);
 }
 
 .displays img {
@@ -167,7 +172,7 @@ body {
 
 #message.active {
   opacity: 1;
-  background-color: #55f77a;
+  background-color: #3ef869;
   color: black;
 }
 
@@ -177,7 +182,8 @@ body {
 }
 
 #message.info {
-  background-color: rgb(72, 171, 252);
+  background-color: rgb(75, 108, 206);
+  color: white;
 }
 
 @media screen and (max-width: 700px) {
