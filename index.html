@@ -12,5 +12,58 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="message active error">Computer wins.</div>
+      <div class="splitup computer">
+        <div class="displays">
+          <img src="./assets/rock.svg" class="rock active" alt="" />
+          <img src="./assets/paper.png" class="paper" alt="" srcset="" />
+          <img src="./assets/scissors.png" class="scissors" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="splitup user">
+        <div class="displays">
+          <img src="./assets/rock.svg" class="rock" alt="" />
+          <img src="./assets/paper.png" class="paper active" alt="" srcset="" />
+          <img src="./assets/scissors.png" class="scissors" alt="" srcset="" />
+        </div>
+        <div class="actions">
+          <img src="./assets/rock.svg" data-value="rock" alt="" />
+          <img
+            src="./assets/paper.png"
+            data-value=""
+            ="paper"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="./assets/scissors.png"
+            data-value=""
+            ="scissors"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div class="scoreboard">
+        <div class="split">
+          <div class="info">
+            <div class="profile">
+              <div class="avatar computer"></div>
+              <span class="name">Computer</span>
+            </div>
+            <span class="score computer-score">28</span>
+          </div>
+          <div class="info">
+            <span class="score user-score">32</span>
+            <div class="profile">
+              <span class="name">You</span>
+              <div class="avatar user"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
