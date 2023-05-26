@@ -100,6 +100,7 @@ const restartGame = () => {
   gameWon = false;
   userScore = 0;
   computerScore = 0;
+  showMessage("Game restarted!", "info");
 };
 
 function updateScore(score, user) {

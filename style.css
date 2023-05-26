@@ -182,8 +182,7 @@ body {
 }
 
 #message.info {
-  background-color: rgb(75, 108, 206);
-  color: white;
+  background-color: rgb(179, 242, 244);
 }
 
 @media screen and (max-width: 700px) {
